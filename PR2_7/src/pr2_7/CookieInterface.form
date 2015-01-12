@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="txtThinMintInput" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblThinMints" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="calculateThinMints" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Component id="lblCookieSales" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="txtSamoaInput" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblSamoa" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="calculateSamoas" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="txtChocolateChipInput" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="lblChocolateChips" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="calculateChocolateChips" min="-2" max="-2" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <Component id="lblCookieSales" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="17" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtThinMintInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblThinMints" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="calculateThinMints" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtSamoaInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblSamoa" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="calculateSamoas" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="txtChocolateChipInput" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="lblChocolateChips" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="calculateChocolateChips" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace pref="164" max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JTextField" name="txtThinMintInput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter thin mints"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblCookieSales">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Cookie Sales"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtSamoaInput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter samoas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtChocolateChipInput">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter chocolate chips"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblThinMints">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Thin mint sales"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblSamoa">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Samoa sales"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblChocolateChips">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Chocolate chip sales"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculateThinMints">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate thin mints"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateThinMintsActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculateSamoas">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate samoas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateSamoasActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="calculateChocolateChips">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Calculate chocolate chips"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="calculateChocolateChipsActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
+</Form>
