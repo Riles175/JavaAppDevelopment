@@ -8,7 +8,7 @@ package pr3_1;
 import java.util.ArrayList;
 import java.util.Scanner;
 /**
- * @description takes 10 integers and calculates max, min, and average also 
+ * takes 10 integers and calculates max, min, and average also 
  * throws exceptions if type other than integer is entered
  * @author rsexton17
  */
@@ -78,9 +78,9 @@ public class IntegerValues {
             
             System.out.printf("Value %d: ", i+1);
             
-            try { values.addToArrayList(x.nextInt()); }
+            try { values.addToArrayList(x.nextInt()); } //checks for integer
             
-            catch (Exception ex) { x.nextLine(); i--; }
+            catch (Exception ex) { x.nextLine(); i--; } //ignores non ints
         }
         
         System.out.println("The max is: ");
