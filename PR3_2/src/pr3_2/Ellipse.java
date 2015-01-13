@@ -14,9 +14,9 @@ public class Ellipse extends Shape {
     
     int _radius1;
     int _radius2;
-    
+    // constructor
     public Ellipse(int r1, int r2) 
-            throws IllegalArgumentException
+            throws IllegalArgumentException // checks for values less than zero
     {
         if(r1 <= 0 || r2 <= 0)
             throw new IllegalArgumentException();

@@ -14,10 +14,10 @@ public class Triangle extends Shape {
     int _side1;
     int _side2;
     int _side3;
-    
+    // constructor
     public Triangle(int s1, int s2, int s3) 
-            throws IllegalArgumentException
-    {
+            throws IllegalArgumentException //checks for values less than zero
+    {                                       //checks for proper side lengths
         if (s1 <= 0 || s2 <= 0 || s3 <= 0)
             throw new IllegalArgumentException();
         if(s1 + s2 < s3 || s2 + s3 <s1 || s1 + s3 < s2)

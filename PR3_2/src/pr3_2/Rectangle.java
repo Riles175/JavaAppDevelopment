@@ -15,8 +15,9 @@ public class Rectangle extends Shape {
     int _width;
     int _height;
     
+    // constructor
     public Rectangle(int width, int height) 
-        throws IllegalArgumentException
+        throws IllegalArgumentException // checks for values less than zero
     {
         if(width <= 0 || height <=0)
             throw new IllegalArgumentException();
