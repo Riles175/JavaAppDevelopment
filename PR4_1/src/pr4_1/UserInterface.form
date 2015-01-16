@@ -23,13 +23,150 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="400" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="txtTextArea" min="-2" pref="202" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="lblRestaurantName" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtRestaurantName" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="addName" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblRestaurantAddress" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtRestaurantAddress" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="addAddress" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="lblRating" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="txtRating" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="addRating" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Component id="AddNotes" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="0" pref="4" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <EmptySpace min="0" pref="300" max="32767" attributes="0"/>
+          <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="txtTextArea" min="-2" pref="138" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="lblRestaurantName" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtRestaurantName" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addName" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblRestaurantAddress" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtRestaurantAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addAddress" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="lblRating" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="txtRating" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="addRating" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="AddNotes" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="130" max="32767" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
   </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JScrollPane" name="txtTextArea">
+      <AuxValues>
+        <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+      </AuxValues>
+
+      <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+      <SubComponents>
+        <Component class="javax.swing.JTextArea" name="txtNotes">
+          <Properties>
+            <Property name="columns" type="int" value="20"/>
+            <Property name="rows" type="int" value="5"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JLabel" name="lblRestaurantName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Restaurant Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtRestaurantName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Name"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblRestaurantAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Restaurant Address"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtRestaurantAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Enter Address"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="AddNotes">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Notes"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="AddNotesActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="lblRating">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="jLabel1"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="txtRating">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Rating from 1 to 5"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="addName">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Name"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addNameActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="addAddress">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Address"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addAddressActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="addRating">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Add Rating"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addRatingActionPerformed"/>
+      </Events>
+    </Component>
+  </SubComponents>
 </Form>

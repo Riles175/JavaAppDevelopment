@@ -16,7 +16,7 @@ public class RestaurantReviewer {
     String _restaurantAddress;
     int _rating;
     String _notes;
-    File f = new File("C:\\Users\\rsexton17\\Documents\\GitHub\\JavaAppDevelopment\\PR4_1\\Notes.txt");
+    File f = new File("Notes.txt");
     
     String getName() { return _resaurantName; }
     
@@ -32,22 +32,20 @@ public class RestaurantReviewer {
     
     void setNotes(String s) { _notes = s; }
     
+    String getNotes() { return _notes; }
+    
     void writeToFile(String s) {
         try {
-            BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true));
-            wrtr.write(s);
-            wrtr.newLine();
-            wrtr.close();
+            try (BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true))) {
+                wrtr.write(s);
+                wrtr.newLine();
+            }
         }
-        catch (Exception ex){};
+        catch (IOException ex){};
     }
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        RestaurantReviewer r = new RestaurantReviewer();
-        
-        r.writeToFile("Hello World");
     }
-    
 }
