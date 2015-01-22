@@ -6,6 +6,11 @@
 
 package finalproject;
 
+import java.net.URISyntaxException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
+
 /**
  *
  * @author rsexton17
@@ -79,7 +84,11 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_listOfItemsActionPerformed
 
     private void accesInternetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accesInternetActionPerformed
-        key.accessFiles(listOfItems.getSelectedItem().toString());
+        try {
+            key.accessFiles(listOfItems.getSelectedItem().toString());
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }//GEN-LAST:event_accesInternetActionPerformed
 
     /**

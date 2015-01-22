@@ -8,6 +8,8 @@ package finalproject;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URLConnection;
 
 /**
@@ -24,13 +26,16 @@ public class Items {
     
     URL getURL() { return _url; }
     
-    void accessFiles(String s) {
+    URI convert(URL _url) throws URISyntaxException { return _url.toURI(); }
+    
+    void accessFiles(String s) throws URISyntaxException {
         switch (s) {
             case "Brakes":
                 try {
                     _url = new URL("http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -45,6 +50,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -59,6 +65,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-tire.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -73,6 +80,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/differential.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -87,6 +95,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/diesel.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -101,6 +110,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/engine.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -115,6 +125,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/automotive-exhaust-system.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -129,6 +140,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/supercharger.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -143,6 +155,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/turbo.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -157,6 +170,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/engine-lubrication-system.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -171,6 +185,7 @@ public class Items {
                     _url = new URL("http://auto.howstuffworks.com/under-the-hood/diagnosing-car-problems/body/tires-rotated.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -185,6 +200,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/steering.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -199,6 +215,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/car-suspension.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -213,6 +230,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/automatic-transmission.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -227,6 +245,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/transmission.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
@@ -241,6 +260,7 @@ public class Items {
                     _url = new URL("http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm");
                     _urlConnection = _url.openConnection();
                     _urlConnection.connect();
+                    java.awt.Desktop.getDesktop().browse(convert(_url));
                 }
                 catch (MalformedURLException e) {
                     System.out.println("Cannot access internet.");
