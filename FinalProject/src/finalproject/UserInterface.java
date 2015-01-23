@@ -6,6 +6,7 @@
 
 package finalproject;
 
+import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -17,13 +18,19 @@ import java.util.logging.Logger;
  */
 public class UserInterface extends javax.swing.JFrame {
 
-    Items key = new Items();
+    Items key;
     
     /**
      * Creates new form UserInterface
      */
     public UserInterface() {
         initComponents();
+        try{
+            key = new Items();
+        }
+        catch (MalformedURLException ex){
+            System.out.println(ex.getMessage());
+        }
     }
 
     /**
