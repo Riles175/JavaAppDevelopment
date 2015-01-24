@@ -5,13 +5,17 @@
  */
 
 package finalproject;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
 import java.net.URI;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.net.URLConnection;
 import java.util.HashMap;
+import java.util.Iterator;
 
 /**
  *
@@ -23,6 +27,9 @@ public class Items {
     URL _url;
     URLConnection _urlConnection;
     HashMap<String, URL> _keys = new HashMap();
+    File f = new File("Items.txt");
+    //BufferedReader rdr = new BufferedReader(new FileReader(f));
+    
     
     public Items() throws MalformedURLException {
         _keys.put("Brakes" , new URL ("http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm"));
@@ -43,6 +50,35 @@ public class Items {
         _keys.put("Wheels", new URL("http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm"));  
     }
     
+    void writeTo() {
+        try {
+            try (BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true))) {
+                String line;
+                Iterator<String> it = _keys.keySet().iterator();
+                while (it.hasNext()) {
+                    line = it.next();
+                    wrtr.write(String.format("%s\t%s", line , _keys.get(line)));
+                    wrtr.newLine();
+                }
+            }
+        }
+        catch (IOException ex) { System.out.println("An error occured."); }    
+    }
+    
+    void addTo(String name, URL url) {
+        try {
+            try (BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true))) {
+                _keys.put(name, url);
+                wrtr.write(String.format("%s\t%s", name, url));
+                wrtr.newLine();
+            }
+
+        }
+        catch (IOException ex) { System.out.println("An error occured."); }
+    }
+    
+    URI convert(URL url) throws URISyntaxException { return url.toURI(); }
+    
     void openConnection() throws IOException, URISyntaxException {
         _url = _keys.get(_name);
         _urlConnection = _url.openConnection();
@@ -53,9 +89,7 @@ public class Items {
     String getName() { return _name; }
     
     URL getURL() { return _url; }
-    
-    URI convert(URL _url) throws URISyntaxException { return _url.toURI(); }
-    
+  
     void accessFiles(String s) throws URISyntaxException {
         switch (s) {
             case "Brakes":
@@ -273,9 +307,21 @@ public class Items {
     
     /**
      * @param args the command line arguments
+     * @throws java.net.MalformedURLException
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args) throws MalformedURLException {
+        UserInterface my = new UserInterface();
+        my.setVisible(true);
+        Items i = new Items();
+        i.writeTo();
     }
     
 }
+/*
+
+new DefaultListModel<String>() {
+    Iterator<String> it = keys.keySet().iterator();
+    while(it.hasNext());
+        keys.put(name, url);
+}
+*/

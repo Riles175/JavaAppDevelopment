@@ -8,6 +8,7 @@ package finalproject;
 
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -44,10 +45,14 @@ public class UserInterface extends javax.swing.JFrame {
 
         listOfItems = new javax.swing.JComboBox();
         accesInternet = new javax.swing.JButton();
+        introLabel = new javax.swing.JLabel();
+        txtAddCategory = new javax.swing.JTextField();
+        addTopicButton = new javax.swing.JButton();
+        txtAddURL = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        listOfItems.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Brakes", "Changing Oil", "Changing Tires", "Differentials", "Engine (Diesel)", "Engine (Gasoline)", "Exhaust", "Forced Induction (Super)", "Forced Induction (Turbo)", "Oil", "Rotating Tires", "Steering Column", "Suspension", "Transmission (Auto)", "Transmission (Manual)", "Wheels", " ", " ", " " }));
+        listOfItems.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Brakes", "Changing Oil", "Changing Tires", "Differentials", "Engine (Diesel)", "Engine (Gasoline)", "Exhaust", "Forced Induction (Super)", "Forced Induction (Turbo)", "Oil", "Rotating Tires", "Steering Column", "Suspension", "Transmission (Auto)", "Transmission (Manual)", "Wheels", " " }));
         listOfItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 listOfItemsActionPerformed(evt);
@@ -61,25 +66,59 @@ public class UserInterface extends javax.swing.JFrame {
             }
         });
 
+        introLabel.setText("Select a topic:");
+
+        txtAddCategory.setText("Add category");
+        txtAddCategory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtAddCategoryActionPerformed(evt);
+            }
+        });
+
+        addTopicButton.setText("Add");
+        addTopicButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addTopicButtonActionPerformed(evt);
+            }
+        });
+
+        txtAddURL.setText("Add URL");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(listOfItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(accesInternet)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(txtAddURL, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(txtAddCategory, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(addTopicButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(introLabel)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(listOfItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(accesInternet))))
                 .addContainerGap(178, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(introLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(listOfItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(accesInternet))
-                .addContainerGap(266, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtAddCategory, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(addTopicButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(txtAddURL, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         pack();
@@ -92,11 +131,40 @@ public class UserInterface extends javax.swing.JFrame {
 
     private void accesInternetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accesInternetActionPerformed
         try {
-            key.accessFiles(listOfItems.getSelectedItem().toString());
+            key.accessFiles(key.getName());
         } catch (URISyntaxException ex) {
             Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
         }
     }//GEN-LAST:event_accesInternetActionPerformed
+
+    private void txtAddCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddCategoryActionPerformed
+        /*String s = txtAddCategory.getText();
+        URL url = null;
+        try {
+            url = new URL(txtAddURL.getText());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        key.addTo(s, url);*/
+    }//GEN-LAST:event_txtAddCategoryActionPerformed
+
+    private void addTopicButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTopicButtonActionPerformed
+        String s = txtAddCategory.getText();
+        URL url = null;
+        try {
+            url = new URL(txtAddURL.getText());
+        } catch (MalformedURLException ex) {
+            Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        try {
+            key.convert(url);
+        } catch (URISyntaxException ex) {
+            Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        key.addTo(s, url);
+        listOfItems.addItem(s);
+    }//GEN-LAST:event_addTopicButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -133,6 +201,10 @@ public class UserInterface extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton accesInternet;
+    private javax.swing.JButton addTopicButton;
+    private javax.swing.JLabel introLabel;
     private javax.swing.JComboBox listOfItems;
+    private javax.swing.JTextField txtAddCategory;
+    private javax.swing.JTextField txtAddURL;
     // End of variables declaration//GEN-END:variables
 }
