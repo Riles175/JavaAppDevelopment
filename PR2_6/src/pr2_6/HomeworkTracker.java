@@ -20,7 +20,7 @@ public class HomeworkTracker {
     ArrayList<Integer> getScores() { return scores; }
     
     int Min(ArrayList<Integer> a) {
-        int currentMin = 100;
+        int currentMin = 100; //PT -- or currentMin = a.get(0);
         for (int i=0; i<a.size(); i ++) {
             if(a.get(i)<currentMin)
                 currentMin = a.get(i);

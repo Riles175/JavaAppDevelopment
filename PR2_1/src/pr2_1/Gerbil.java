@@ -24,6 +24,8 @@ public class Gerbil {
     /**
      * @param args the command line arguments
      */
+        //PT - I'd prefer this to be in a separate class than Gerbil -- Gerbils
+        //    don't have a main() behavior ... -2
     public static void main(String[] args) {
         ArrayList gerbils = new ArrayList<Gerbil>();
 		for (int i = 0; i < 10; i++)

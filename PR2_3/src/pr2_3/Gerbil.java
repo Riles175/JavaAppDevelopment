@@ -11,6 +11,7 @@ import java.util.Iterator;
  *
  * @author rsexton17
  */
+//PT -- as before, reuse the Gerbil class, don't copy/paste it
 public class Gerbil {
         private int gerbilNumber;
 

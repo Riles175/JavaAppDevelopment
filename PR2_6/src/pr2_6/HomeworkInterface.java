@@ -144,6 +144,9 @@ public class HomeworkInterface extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    //PT -- how do the scored get into the interface? I'm hitting enter,
+    //   and it's changing the max to 100 and the min to 0. It's not using my
+    //   entries. -5
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

@@ -11,6 +11,8 @@ import java.util.Iterator;
  *
  * @author rsexton17
  */
+//PT - If your Gerbil and main() were separated in PR2_1, then you could reuse that class
+//  here, rather than copy/paste it here. -2
 public class Gerbil {
         private static int gerbilCounter = 0;
 	private int gerbilNumber = ++gerbilCounter;
