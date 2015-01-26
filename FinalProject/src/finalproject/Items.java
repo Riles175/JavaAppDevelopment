@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 /**
- *
+ * 
  * @author rsexton17
  */
 public class Items {
@@ -30,7 +30,9 @@ public class Items {
     File f = new File("Items.txt");
     //BufferedReader rdr = new BufferedReader(new FileReader(f));
     
-    
+    /*
+    * generates a pre-set list of links for the user to choose from
+    */
     public Items() throws MalformedURLException {
         _keys.put("Brakes" , new URL ("http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm"));
         _keys.put("Changing Oil", new URL("http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm"));
@@ -47,9 +49,12 @@ public class Items {
         _keys.put("Suspension", new URL("http://www.howstuffworks.com/car-suspension.htm"));
         _keys.put("Transmission (Auto)", new URL("http://www.howstuffworks.com/automatic-transmission.htm"));
         _keys.put("Transmission (Manual)", new URL("http://www.howstuffworks.com/transmission.htm"));
-        _keys.put("Wheels", new URL("http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm"));  
+        _keys.put("Wheels", new URL("http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm"));
     }
     
+    /*
+    * writes the url and name of link into a file to be saved for future use
+    */
     void writeTo() {
         try {
             try (BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true))) {
@@ -65,6 +70,9 @@ public class Items {
         catch (IOException ex) { System.out.println("An error occured."); }    
     }
     
+    /*
+    * adds a new name and url to the file of other links
+    */
     void addTo(String name, URL url) {
         try {
             try (BufferedWriter wrtr = new BufferedWriter(new FileWriter(f, true))) {
@@ -77,232 +85,41 @@ public class Items {
         catch (IOException ex) { System.out.println("An error occured."); }
     }
     
+    /*
+    * Takes a url and converts it into a uri
+    * Returns a uri
+    */
     URI convert(URL url) throws URISyntaxException { return url.toURI(); }
     
-    void openConnection() throws IOException, URISyntaxException {
-        _url = _keys.get(_name);
+    /*
+    * Takes a string
+    * Opens a connection through a given url
+    */
+    void openConnection(String name) throws IOException, URISyntaxException {
+        _url = _keys.get(name);
         _urlConnection = _url.openConnection();
         _urlConnection.connect();
         java.awt.Desktop.getDesktop().browse(convert(_url));
     }
     
+    /*
+    * gets the name of the link
+    * returns the name
+    */
     String getName() { return _name; }
     
+    /*
+    * gets the url of the link
+    * returns the url
+    */
     URL getURL() { return _url; }
-  
-    void accessFiles(String s) throws URISyntaxException {
-        switch (s) {
-            case "Brakes":
-                try {
-                    _name = "Brakes";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;
-                
-            case "Changing Oil":
-                try {
-                    _name = "Changing Oil";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;  
-                
-            case "Changing Tires":
-                try {
-                    _name = "Changing Tires";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;      
-             
-            case "Differentials":
-                try {
-                    _name = "Differentials";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;  
-                
-            case "Engine (Diesel)":
-                try {
-                    _name = "Engine (Diesel)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;      
-            
-            case "Engine (Gasoline)":
-                try {
-                    _name = "Engine (Gasoline)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;       
-            
-            case "Exhaust":
-                try {
-                    _name = "Exhaust";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;     
-           
-            case "Forced Induction (Super)":
-                try {
-                    _name = "Forced Induction (Super)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;   
-                
-            case "Forced Induction (Turbo)":
-                try {
-                    _name = "Forced Induction (Turbo)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;       
-            
-            case "Oil":
-                try {
-                    _name = "Oil";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;      
-            
-            case "Rotating Tires":
-                try {
-                    _name = "Rotating Tires";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;     
-            
-            case "Steering Column":
-                try {
-                    _name = "Steering Column";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;      
-                
-            case "Suspension":
-                try {
-                    _name = "Suspension";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;       
-           
-            case "Transmission (Auto)":
-                try {
-                    _name = "Transmission (Auto)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;    
-            
-            case "Transmission (Manual)":
-                try {
-                    _name = "Transmission (Manual)";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;      
-            
-            case "Wheels":
-                try {
-                    _name = "Wheels";
-                    openConnection();
-                }
-                catch (MalformedURLException e) {
-                    System.out.println("Cannot access internet.");
-                }
-                catch (IOException e) {
-                    System.out.println("Cannot access file.");
-                }
-            break;     
-                
-            default: System.out.println("Something weird happened...");
-            break;
-        }
+    
+    /*
+    * takes a string
+    * accesses the file given
+    */
+    void accessFiles(String s) throws URISyntaxException, IOException {
+        openConnection(s);
     }
     
     /**
@@ -314,6 +131,10 @@ public class Items {
         my.setVisible(true);
         Items i = new Items();
         i.writeTo();
+    }
+
+    private void openConnection(URL s) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

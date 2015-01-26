@@ -14,7 +14,6 @@ Engine (Gasoline)	http://www.howstuffworks.com/engine.htm
 Brakes	http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm
 Engine (Diesel)	http://www.howstuffworks.com/diesel.htm
 Transmission (Auto)	http://www.howstuffworks.com/automatic-transmission.htm
-Changing Car Battery	http://auto.howstuffworks.com/under-the-hood/vehicle-maintenance/change-car-battery.htm
 Forced Induction (Super)	http://www.howstuffworks.com/supercharger.htm
 Changing Oil	http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm
 Wheels	http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm
@@ -31,3 +30,4 @@ Engine (Gasoline)	http://www.howstuffworks.com/engine.htm
 Brakes	http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm
 Engine (Diesel)	http://www.howstuffworks.com/diesel.htm
 Transmission (Auto)	http://www.howstuffworks.com/automatic-transmission.htm
+FaceBook	https://www.facebook.com/
