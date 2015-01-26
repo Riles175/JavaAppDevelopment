@@ -31,3 +31,36 @@ Brakes	http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm
 Engine (Diesel)	http://www.howstuffworks.com/diesel.htm
 Transmission (Auto)	http://www.howstuffworks.com/automatic-transmission.htm
 FaceBook	https://www.facebook.com/
+Forced Induction (Super)	http://www.howstuffworks.com/supercharger.htm
+Changing Oil	http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm
+Wheels	http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm
+Forced Induction (Turbo)	http://www.howstuffworks.com/turbo.htm
+Differentials	http://www.howstuffworks.com/differential.htm
+Steering Column	http://www.howstuffworks.com/steering.htm
+Suspension	http://www.howstuffworks.com/car-suspension.htm
+Rotating Tires	http://auto.howstuffworks.com/under-the-hood/diagnosing-car-problems/body/tires-rotated.htm
+Changing Tires	http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-tire.htm
+Exhaust	http://www.howstuffworks.com/automotive-exhaust-system.htm
+Oil	http://www.howstuffworks.com/engine-lubrication-system.htm
+Transmission (Manual)	http://www.howstuffworks.com/transmission.htm
+Engine (Gasoline)	http://www.howstuffworks.com/engine.htm
+Brakes	http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm
+Engine (Diesel)	http://www.howstuffworks.com/diesel.htm
+Transmission (Auto)	http://www.howstuffworks.com/automatic-transmission.htm
+Whitworth	http://www.whitworth.edu/cms/
+Forced Induction (Super)	http://www.howstuffworks.com/supercharger.htm
+Changing Oil	http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm
+Wheels	http://www.howstuffworks.com/auto-parts/towing/equipment/accessories/tires-and-wheels.htm
+Forced Induction (Turbo)	http://www.howstuffworks.com/turbo.htm
+Differentials	http://www.howstuffworks.com/differential.htm
+Steering Column	http://www.howstuffworks.com/steering.htm
+Suspension	http://www.howstuffworks.com/car-suspension.htm
+Rotating Tires	http://auto.howstuffworks.com/under-the-hood/diagnosing-car-problems/body/tires-rotated.htm
+Changing Tires	http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-tire.htm
+Exhaust	http://www.howstuffworks.com/automotive-exhaust-system.htm
+Oil	http://www.howstuffworks.com/engine-lubrication-system.htm
+Transmission (Manual)	http://www.howstuffworks.com/transmission.htm
+Engine (Gasoline)	http://www.howstuffworks.com/engine.htm
+Brakes	http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm
+Engine (Diesel)	http://www.howstuffworks.com/diesel.htm
+Transmission (Auto)	http://www.howstuffworks.com/automatic-transmission.htm

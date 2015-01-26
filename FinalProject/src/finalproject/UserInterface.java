@@ -144,15 +144,7 @@ public class UserInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_accesInternetActionPerformed
 
     private void txtAddCategoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAddCategoryActionPerformed
-        /*String s = txtAddCategory.getText();
-        URL url = null;
-        try {
-            url = new URL(txtAddURL.getText());
-        } catch (MalformedURLException ex) {
-            Logger.getLogger(UserInterface.class.getName()).log(Level.SEVERE, null, ex);
-        }
         
-        key.addTo(s, url);*/
     }//GEN-LAST:event_txtAddCategoryActionPerformed
 
     private void addTopicButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addTopicButtonActionPerformed
