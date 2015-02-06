@@ -11,7 +11,7 @@ package pr4_1;
  * @author rsexton17
  */
 public class UserInterface extends javax.swing.JFrame {
-    
+    //PT -- I don't see where you read from the file. -10
     RestaurantReviewer r = new RestaurantReviewer();
     /**
      * Creates new form UserInterface
