@@ -17,7 +17,7 @@ public class RestaurantReviewer {
     int _rating;
     String _notes;
     File f = new File("Notes.txt");
-    
+    //javadoc? -4
     String getName() { return _resaurantName; }
     
     void setName(String name) { _resaurantName = name; }
@@ -28,7 +28,7 @@ public class RestaurantReviewer {
     
     int getRating() { return _rating; }
     
-    void setRating(int rating) { _rating = rating; }
+    void setRating(int rating) { _rating = rating; } //PT -- check that rating is in [1,5]
     
     void setNotes(String s) { _notes = s; }
     
