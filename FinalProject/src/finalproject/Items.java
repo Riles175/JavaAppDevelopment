@@ -34,6 +34,7 @@ public class Items {
     * generates a pre-set list of links for the user to choose from
     */
     public Items() throws MalformedURLException {
+        //PT -- as we talked about, if you could put these in a file, then adding/removing items would be much easier
         _keys.put("Brakes" , new URL ("http://auto.howstuffworks.com/auto-parts/brakes/brake-types/brake.htm"));
         _keys.put("Changing Oil", new URL("http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-oil.htm"));
         _keys.put("Changing Tires", new URL("http://www.howstuffworks.com/under-the-hood/vehicle-maintenance/change-tire.htm"));
@@ -67,6 +68,7 @@ public class Items {
                 }
             }
         }
+        //PT -- System.out doesn't work well for GUI apps
         catch (IOException ex) { System.out.println("An error occured."); }    
     }
     
